@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#fff8f3;
+color:#333;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url('https://i.pinimg.com/736x/31/c7/6c/31c76c38fd75409f4e8bd59c9172278a.jpg');     
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero-content h1{
+font-family:'Great Vibes',cursive;
+font-size:4rem;
+}
+
+.hero-content h2{
+font-size:2rem;
+margin-top:10px;
+}
+
+.hero-content p{
+margin-top:15px;
+font-size:1.2rem;
+}
+
+.section{
+padding:70px 20px;
+text-align:center;
+}
+
+.section h2{
+font-family:'Great Vibes',cursive;
+font-size:3rem;
+color:#d63384;
+margin-bottom:20px;
+}
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.box{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+width:100px;
+}
+
+.box h3{
+font-size:2rem;
+color:#d63384;
+}
+
+.events{
+max-width:700px;
+margin:auto;
+}
+
+.event-card{
+background:white;
+padding:20px;
+margin:15px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.location-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#d63384;
+color:white;
+text-decoration:none;
+border-radius:30px;
+}
+
+.footer{
+background:#c5312e;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.floating-hearts{
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.heart{
+position:absolute;
+color:pink;
+animation:float 8s linear infinite;
+font-size:20px;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+@media(max-width:768px){
+.hero-content h1{
+font-size:3rem;
+}
+.hero-content h2{
+font-size:1.5rem;
+}
+}
+
+</style>
+</head>
+<body>
+
+    
+
+<div class="floating-hearts" id="hearts"></div>
+
+
+
+<section class="hero">
+<div class="hero-content">
+<h1>Lina ❤️ Nikhil</h1>
+<h2>We're Getting Married</h2>
+<p>Juily 9, 2026</p>
+</div>
+</section>
+
+<section class="section">
+<h2>Wedding Countdown</h2>
+
+<div class="countdown">
+
+<div class="box">
+<h3 id="days">0</h3>
+<p>Days</p>
+</div>
+
+<div class="box">
+<h3 id="hours">0</h3>
+<p>Hours</p>
+</div>
+
+<div class="box">
+<h3 id="minutes">0</h3>
+<p>Minutes</p>
+</div>
+
+<div class="box">
+<h3 id="seconds">0</h3>
+<p>Seconds</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Wedding Events</h2>
+
+<div class="events">
+
+<div class="event-card">
+<h3>💛 Haldi Ceremony</h3>
+<p>9 Juily 2026 - 8:00 AM</p>
+</div>
+
+
+<div class="event-card">
+<h3>💍 Wedding Ceremony</h3>
+<p>9 Juily 2026 - 12:44 PM</p>
+</div>
+
+
+</div>
+
+</section>
+<!--
+https://images.unsplash.com/photo-1519741497674-611481863552
+
+<section class="section">
+<h2>Venue</h2>
+
+<p>Sumangal Hall, Faizpur</p>
+
+<a href="https://maps.google.com"
+class="location-btn">
+📍 Open Location
+</a>
+
+</section>
+
+<section class="section">
+  <h2>Venue</h2>
+
+  <p>📍 Sumangal Wedding Hall</p>
+  <h3>📌 We are waiting for you here</h3>
+
+  <iframe 
+    src="https://maps.app.goo.gl/pVBpmRLgCZAyWRbV8"
+    width="100%" 
+    height="300" 
+    style="border:0; border-radius:15px;"
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+
+  <a href="https://maps.app.goo.gl/pVBpmRLgCZAyWRbV8" 
+     class="location-btn" target="_blank">
+    📍 Open in Google Maps
+  </a>
+</section> -->
+<section class="section">
+  <h2>Venue</h2>
+
+  <p>📍 Sumangal Wedding Hall, Faizpur</p>
+  <h3>📌 We are waiting for you here</h3>
+
+  <!-- LIVE MAP (Correct Embed Link) -->
+  <iframe 
+    src="https://www.google.com/maps?q=Sumangal+Hall+Faizpur+Jalgaon&output=embed"
+    width="100%" 
+    height="300" 
+    style="border:0; border-radius:15px;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+
+  <!-- BUTTON -->
+  <a href="https://www.google.com/maps/search/?api=1&query=Sumangal+Hall+Faizpur+Jalgaon" 
+     class="location-btn" 
+     target="_blank">
+    📍 Open in Google Maps
+  </a>
+</section>
+
+<section class="section">
+<h2>Our Memories</h2>
+
+<div class="gallery">
+
+<img src="C:\Users\sunil\Desktop\photo_2026-06-16_18-54-37 (2).jpg">
+<img src="C:\Users\sunil\Desktop\photo_2026-06-16_19-07-15.jpg">
+
+<img src="C:\Users\sunil\Desktop\photo_2026-06-16_18-54-37.jpg">
+
+
+
+</div>
+
+</section>
+
+<div class="footer">
+<h3>With Love ❤️</h3>
+<p>We look forward to celebrating with you!</p>
+</div>
+
+<script>
+/*
+const weddingDate = new Date("July 9, 2026 12:44:00").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();  // ALWAYS real current time
+  const distance = weddingDate - now;
+
+  if (distance < 0) {
+    document.getElementById("days").innerHTML = "0";
+    document.getElementById("hours").innerHTML = "0";
+    document.getElementById("minutes").innerHTML = "0";
+    document.getElementById("seconds").innerHTML = "0";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);    */
+
+
+
+const weddingDate = new Date("2026-07-09T12:44:00").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
+
+  if (distance <= 0) {
+    document.getElementById("days").innerHTML = "0";
+    document.getElementById("hours").innerHTML = "0";
+    document.getElementById("minutes").innerHTML = "0";
+    document.getElementById("seconds").innerHTML = "0";
+    return;
+  }
+
+  // 🔥 IMPORTANT FIX HERE (round instead of floor for days)
+  const days = Math.ceil(distance / (1000 * 60 * 60 * 24)) - 1;
+
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+
+const hearts=document.getElementById("hearts");
+
+setInterval(()=>{
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"%";
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+hearts.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+},500);
+
+</script>
+
+</body>
+</html>
